@@ -3,6 +3,17 @@ import './App.css'
 
 function App() {
   const [color, setColor] = useState('olive');
+  const [inputColor, setInputColor] = useState('');
+
+  const handleSubmit = (event) => {
+    setInputColor(event.target.value);
+  }
+
+  const handleInputChange = (event) => {
+    event.preventDefault();
+    setColor(inputColor);
+    setInputColor('');
+  }
   
   
 
@@ -26,7 +37,8 @@ function App() {
             green
           </button>
         </button>
-        <input className='input' type='text' placeholder='Input the color' style={{padding: '16px 24px', marginLeft: '10px', border: 'solid', borderColor:'black', borderRadius:'34px', borderWidth: '2px'}}/>
+        <input onChange={ handleInputChange } value={inputColor} className='input' type='text' placeholder='Input the color' style={{padding: '16px 24px', marginLeft: '10px', border: 'solid', borderColor:'black', borderRadius:'34px', borderWidth: '2px'}}/>
+        <button onClick="{ handleSubmit }"style={{padding: '16px 24px', marginLeft: '10px', border: 'solid', borderColor:'black', borderRadius:'34px', borderWidth: '2px', backgroundColor: 'white'}}>Changer Color</button>
       </div>
     </div>
     </>
