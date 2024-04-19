@@ -37,8 +37,7 @@ function App() {
             green
           </button>
         </button>
-        <input onChange={ handleInputChange } value={inputColor} className='input' type='text' placeholder='Input the color' style={{padding: '16px 24px', marginLeft: '10px', border: 'solid', borderColor:'black', borderRadius:'34px', borderWidth: '2px'}}/>
-        <button onClick="{ handleSubmit }"style={{padding: '16px 24px', marginLeft: '10px', border: 'solid', borderColor:'black', borderRadius:'34px', borderWidth: '2px', backgroundColor: 'white'}}>Changer Color</button>
+        <input type='color'/>
       </div>
     </div>
     </>
